@@ -6,7 +6,7 @@ redirect_from:
 nav_order: 0
 ---
 
-This is the documentations, reference, and informal specification of the XY programming language.
+This is the documentation, reference, and informal specification of the XY programming language.
 
 The XY Programming Language aims to realize its creators' vision of how software
 is to be created and help them in building better software. It is a rethinking of
