@@ -2,10 +2,10 @@ title: Ξ Language
 description: XY Language Documentation
 theme: just-the-docs
 
-url: https://xy-lang.org
+url: https://docs.xy-lang.org
 
 aux_links:
-  XY on Github: https://github.com/xy-lang/
+  XY on Github: https://github.com/xy-org/
 
 liquid:
   error_mode: strict
