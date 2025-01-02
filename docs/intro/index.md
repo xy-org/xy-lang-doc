@@ -14,15 +14,24 @@ some of the concepts assumed true in the past 20-30 year of programming.
 
 The language is named after the greek letter [Ξ](https://en.wikipedia.org/wiki/Xi_(letter)) (lowercase: ξ) which is transliterated as `XY` or `xy` and pronounced `/sai/`.
 
-{: .highlight }
-A [step-by-step tutorial](TLD) is provided elsewhere.
-
 {: .important }
 The language is not completely stable i.e. any part of the documentation is subject to change.
 
-## who is it for
+## Newcomers to XY
 
-## How to read this documentation
+Newcomers are more than welcome to skim the documentation in order to get a feeling
+for the language. However a [step-by-step tutorial](TLD) is provided elsewhere.
+This documentation assumes some familiarity with the language.
 
-Every feature of the language is demonstrated by at least one example, description
-in text, and an explanation why the feature is designed in a specific way. 
+## How to Read This Documentation
+
+The reader is free to read and consume this material however they wish but the
+creators' recommendations are as follows:
+
+* For pages that describe features in the language:
+  1. Read the code examples
+  2. Read the comments in the code examples
+  3. Read the full description of the feature in question
+
+* Pages that describe concepts in the language should be read from top to bottom
+like a book.
