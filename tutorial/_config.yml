@@ -1,8 +1,8 @@
-title: Ξ Language
-description: XY Language Documentation
+title: Ξ Tutorial
+description: XY Programming Language Tutorial
 theme: just-the-docs
 
-url: https://doc.xy-lang.org
+url: https://doc.xy-lang.org/tutorial
 
 aux_links:
   XY on Github: https://github.com/xy-org/
@@ -53,12 +53,9 @@ callouts:
 plugins:
   - jekyll-redirect-from
 
-exclude:
-  - tutorial
-
 defaults:
   - scope:
-      path: "docs"
+      path: "*"
       type: "pages"
     values:
       layout: "default"
