@@ -44,7 +44,7 @@ jobs:
         # Outputs to the './_site' directory by default
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/tutorial" --destination ../_site/tutorial
+          cd tutorial && bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/tutorial" --destination ../_site/tutorial
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
