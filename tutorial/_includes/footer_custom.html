@@ -1,7 +1,7 @@
 {% assign nextNav = page.nav_order | plus: 1 %}
 {% assign aim = site.pages | where:"nav_order",nextNav | first %}
 {% if aim %}
-<a class="btn btn-green" href="{{aim.url}}">>> Next >> {{aim.title}}</a>
+<a class="btn btn-green" href="{{aim.url | relative_url }}">>> Next >> {{aim.title}}</a>
 {% endif %}
 
 <p class="fs-2">Copyright © 2024-2025 Xy Org. Distributed by an MIT license.</p>
