@@ -1,15 +1,17 @@
 ---
-title: Hello World
+title: Installation
 nav_order: 0
 ---
 
-# Linux
+# Installation
 
-## Prerequisites
+## Linux
+
+### Prerequisites
 
 A preinstalled c compiler - either gcc or clang is required.
 
-## Download and Install
+### Download and Install
 
 The following snippet downloads and installs the latest version of `xyc` in the
 directory `~/.xyc/bin`. You can edit the snippet and place it anywhere you like.
@@ -22,7 +24,15 @@ echo "export PATH=\"\$HOME/.xyc/bin:\$PATH\"" >> ~/.bashrc
 export PATH="$HOME/.xyc/bin:$PATH"
 ```
 
-## Update
+And then to make sure it is installed correctly run:
+
+```bash
+xyc --help
+```
+
+If you see the help information then you are all set.
+
+### Update
 
 `xyc` is under rapid development and it is recommended to update often. If you
 experience a problem it is always a good idea to update first in case the issue has

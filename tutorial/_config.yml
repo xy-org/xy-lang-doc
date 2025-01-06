@@ -49,6 +49,9 @@ callouts:
   warning:
     title: Warning
     color: red
+  reason:
+    title: But Why?
+    color: grey-dk
 
 plugins:
   - jekyll-redirect-from
