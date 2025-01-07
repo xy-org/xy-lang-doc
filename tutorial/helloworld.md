@@ -74,8 +74,26 @@ The example is simple but it showcases a lot of the features and ideas of XY.
 Let's dissect it line by line.
 
 `import libxy.stdio;` - this imports the `stdio` module from `libxy`. It is the
-module that contains the `print` function. Aha... so XY has structured modules
+module that contains the `print` function. XY has structured modules
 with submodules and so on (instead of header files and compiler magic like C).
 
-`import libxy.string;` - imports `string` module. Aha... so XY doesn't have
-builtin string
+`import libxy.string;` - XY doesn't have builtin strings. This means we have to
+import a library that implements them for us.
+
+`def main~EntryPoint() -> int {` - defines a function called `main` tagged as
+`EntryPoint` that returns `int`. More about tags latter.
+
+`print("Hello World\n");` - this line is self explanatory - it calls the function
+`print` with the string `Hello World\n"
+
+## Peaking Under the Hood
+
+`xyc` works as a source-to-source compiler. It compiles XY source code to C and
+then compiles the C code to an executable. To get just the C code run:
+
+```bash
+xyc -c helloworld.xy -L libs/
+cat helloworld.c
+```
+
+Enjoy!
