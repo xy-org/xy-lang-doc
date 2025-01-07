@@ -1,7 +1,6 @@
 ---
 title: Installation
 nav_order: 0
-download_link: https://github.com/xy-org/pyxyc/releases/download/continuous/xyc-x86_64
 ---
 
 # Installation
@@ -20,16 +19,13 @@ The following snippet downloads and installs the latest version of `xyc` in the
 directory `~/.xyc/bin`. You can edit the snippet and place it anywhere you like.
 
 ```bash
-curl "{{page.download_link}}" --create-dirs -Lo ~/.xyc/bin/xyc
-chmod u+x ~/.xyc/bin/xyc
-echo "export PATH=\"\$HOME/.xyc/bin:\$PATH\"" >> ~/.bashrc
-export PATH="$HOME/.xyc/bin:$PATH"
+{% include steps/download.sh %}
 ```
 
 And then to make sure it is installed correctly run:
 
 ```bash
-xyc --help
+{% include steps/check-help.sh %}
 ```
 
 If you see the help information then you are all set.
@@ -43,5 +39,5 @@ already been fixed.
 Fortunately because xyc is just a simple executable it can be updated fairy easily:
 
 ```bash
-curl "{{page.download_link}}" -Lo ~/.xyc/bin/xyc
+{% include steps/update.sh %}
 ```

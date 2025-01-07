@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+source _includes/steps/download.sh
+source _includes/steps/check-help.sh
+source _includes/steps/update.sh

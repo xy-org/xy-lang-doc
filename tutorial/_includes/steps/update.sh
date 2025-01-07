@@ -1,0 +1,1 @@
+curl "https://github.com/xy-org/pyxyc/releases/download/continuous/xyc-x86_64" -Lo ~/.xyc/bin/xyc

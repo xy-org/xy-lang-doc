@@ -33,6 +33,8 @@ nav_error_report: true # default is false/nil.
 # logo: "/assets/images/logo.svg"
 favicon_ico: "/assets/images/logo.svg"
 
+exclude: [test]
+
 callouts_level: quiet # or loud
 callouts:
   highlight:
