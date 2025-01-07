@@ -24,5 +24,7 @@ jobs:
         run: bundle exec jekyll build
         working-directory: ./tutorial
       - name: Test Tutorial
-        run: ./test
+        run: | # fuse is required by AppImage
+          apt install libfuse3-3
+          ./test
         working-directory: ./tutorial
