@@ -25,6 +25,6 @@ jobs:
         working-directory: ./tutorial
       - name: Test Tutorial
         run: | # fuse is required by AppImage
-          apt install libfuse3-3
+          sudo apt-get install -y fuse
           ./test
         working-directory: ./tutorial
