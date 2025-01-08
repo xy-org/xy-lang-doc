@@ -15,17 +15,13 @@ Which is a bit more involved. So to keep things simple let's start with the
 simplest possible program - one that doesn't do anything and just returns 0.
 
 ```python
-def main~EntryPoint() -> int {
-    return 0;
-}
+{% include steps/hellozero.xy %}
 ```
 
 Save this snippet in a file called `hellozero.xy`. In order to compile and run:
 
 ```bash
-xyc hellozero.xy
-./hellozero
-echo $?
+{% include steps/build-hellozero.sh %}
 ```
 
 Et voilà! You should see a big, fat zero. It ain't exiting but it is a solid

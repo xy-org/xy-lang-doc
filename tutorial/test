@@ -2,6 +2,13 @@
 
 set -e
 
-source _includes/steps/download.sh
-source _includes/steps/check-help.sh
-source _includes/steps/update.sh
+cd _includes/steps/
+
+# Test Installation
+
+source download.sh
+source check-help.sh
+source update.sh
+
+# Test Examples
+source build-hellozero.sh
