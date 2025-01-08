@@ -1,0 +1,1 @@
+git clone --depth 1 -b stable https://github.com/xy-org/libxy.git libs/libxy

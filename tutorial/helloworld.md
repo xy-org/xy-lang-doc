@@ -29,18 +29,14 @@ library available to XY programmer. It includes common functionality like
 functions for console output. Let's install it.
 
 ```bash
-# first create a folder that is going to serve as the base of all examples
-mkdir xy-tutorial
-cd xy-tutorial
-# make a dir for our dependencies
-mkdir libs
+{% include steps/create-base.sh %}
 ```
 
 Now that the basic structure is in place installing libxy (or any other library)
 is as simple as
 
 ```bash
-git clone --depth 1 -b stable https://github.com/xy-org/libxy.git libs/
+{% include steps/clone-libxy.sh %}
 ```
 
 ## Finally Printing Out a Message
@@ -48,20 +44,13 @@ git clone --depth 1 -b stable https://github.com/xy-org/libxy.git libs/
 Create a file `helloworld.xy` with the following content
 
 ```python
-import libxy.stdio;
-import libxy.string;
-
-def main~EntryPoint() -> int {
-    print("Hello World\n");
-    return 0;
-}
+{% include steps/helloworld.xy %}
 ```
 
 And then to compile:
 
 ```bash
-xyc helloworld.xy -L libs/
-./helloworld
+{% include steps/build-helloworld.sh %}
 ```
 
 You should see the message `Hello World`. If you do 🥳. Else complain to the

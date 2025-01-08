@@ -10,5 +10,11 @@ source download.sh
 source check-help.sh
 source update.sh
 
-# Test Examples
+# Test Hello Zero
 source build-hellozero.sh
+
+# Test Hello World
+source create-base.sh
+source ../clone-libxy.sh
+cp ../helloworld.xy .
+cp ../build-helloworld.sh . && source build-helloworld.sh
