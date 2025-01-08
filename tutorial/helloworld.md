@@ -47,7 +47,7 @@ git clone --depth 1 -b stable https://github.com/xy-org/libxy.git libs/
 
 Create a file `helloworld.xy` with the following content
 
-```xy
+```python
 import libxy.stdio;
 import libxy.string;
 
