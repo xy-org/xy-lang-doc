@@ -19,9 +19,10 @@ The language is not completely stable i.e. any part of the documentation is subj
 
 ## Newcomers to XY
 
-Newcomers are more than welcome to skim the documentation in order to get a feeling
-for the language. However a [step-by-step tutorial](TLD) is provided elsewhere.
-This documentation assumes some familiarity with the language.
+If you are new to the language it is advisable to start by reading the [step-by-step tutorial](/tutorial)
+as this documentation assumes some familiarity with the language.
+However you can also skim the documentation in order to get a feeling
+for the language.
 
 ## How to Read This Documentation
 
