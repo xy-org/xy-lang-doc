@@ -9,14 +9,14 @@ nav_order: 0
 
 ### Prerequisites
 
-* Knowledge of another programming language - preferably C/C++, Python or both.
+* Knowledge of another programming language - preferably C/C++, Python or similar.
 
 * A preinstalled c compiler - either gcc or clang.
 
 ### Download and Install
 
-The following snippet downloads and installs the latest version of `xyc` in the
-directory `~/.xyc`. You can edit the snippet and place it anywhere you like.
+The following snippet downloads and installs the latest version of `xyc` in
+directory `~/.xyc`. You can edit the snippet and place it wherever you like.
 
 ```bash
 {% include steps/download.sh %}
@@ -33,7 +33,7 @@ to [explicitly allow the application](https://support.apple.com/en-us/102445)
 to run by going to `System Settings -> Privacy & Security`
 scrolling down to the `Security` section and clicking the `Open Anyway` button.
 
-### Update
+### Updating xyc
 
 `xyc` is under rapid development and it is recommended to update often. If you
 experience a problem it is always a good idea to update first in case the issue has
