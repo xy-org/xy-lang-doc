@@ -1,1 +1,1 @@
-curl "https://github.com/xy-org/pyxyc/releases/download/continuous/xyc-x86_64" -Lo ~/.xyc/bin/xyc
+curl -L "https://github.com/xy-org/pyxyc/releases/download/continuous/xyc-$(uname | awk '{print tolower($0)}').tar.gz" | tar xz -C ~/.xyc
