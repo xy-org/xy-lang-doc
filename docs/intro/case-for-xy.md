@@ -10,6 +10,8 @@ parent: Intro
 The following principles form the basis of XY. They are threated as axioms
 although some evidence is provided to support them.
 
+### Not possible to argue with good results
+
 ### Software is practical not theoretical
 
 No one pays for software that runs in theory. The entire field is based on
@@ -39,6 +41,10 @@ by the programming language but very useful illusions.
 
 We are all humans and we all make mistakes. A programming language should
 account for this.
+
+### One can always shoot oneself in the foot no matter how hard the language tries to prevent it
+
+### With great power comes great responsibility
 
 ### Indirect calls are a powerful tool to be used carefully
 
@@ -116,7 +122,9 @@ their language and write software with it.
 
 ### Data is more important than code
 
-Clean, well ordered data is more important than a clean, well written algorithm. In fact, algorithms are usually dictated by the data we have and its format. Bad algorithms can be fixed much easier than badly structured data.
+Clean, well ordered data is more important than a clean, well written algorithm.
+In fact, algorithms are usually dictated by the data we have and its format. Bad
+algorithms can be fixed much easier than badly structured data.
 
 ### C is the most influential language
 
@@ -126,18 +134,33 @@ C is so influence because of its simplicity and power.
 
 ### Based on practice, not theory
 
-XY is neither object-oriented, nor function. All of its features are extracted from practice. It strives to provide the minimum set of features, that allow for the best possible results.
+XY is neither object-oriented, nor function. All of its features are extracted
+from practice. It strives to provide the minimum set of features, that allow for
+the best possible results.
 
 ### Relative simplicity
 
-XY concerns itself with **code, data, compilation and packaging, expressiveness**.
+XY concerns itself with **code, data, compilation and packaging,
+expressiveness**.
 
 No preprocessor, no meta-programming sub-language, no built-in reflection.
 
 ### Separation of data and code
 
-XY tries to keep the two as far apart as possible. There is not mixing of data and code. And data and code are compiled in different passes.
+XY tries to keep the two as far apart as possible. There is not mixing of data
+and code. And data and code are compiled in different passes.
 
 ### Boldness
 
-Life is too short for another boring language. XY tries to be different. It's not a language for everybody and that's OK.
+Life is too short for another boring language. XY tries to be different. It's
+not a language for everybody and that's OK.
+
+## XY overview
+
+ * Statically typed
+ * Imperative
+ * Minimizes indirection
+ * Holistic approach
+ * Heavily inspired by C
+
+TODO describe abstract machine TODO mention test vectors

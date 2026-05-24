@@ -4,70 +4,162 @@ nav_order: 10
 ---
 # Functions
 
-Functions are xy's way of packaging behavior. The core idea is the same as in
+Functions are xy's way of describing behavior. The core idea is the same as in
 languages like C.
 
-```xy
-def myfunc(x: int, y: int) -> (res: int) {
-    res = x + y;
-}
-```
-
-The name of the function must follow a [camel-case notation](TLD).
-Parameters have the same syntax as variable declarations because they are a kind
-of variables.
-
-## Return statements
-
-In many cases naming the output value (`res` in the example above) may be a bit clunky.
-Maybe there is no appropriate name like in the example above. `res` is not really a name
-that tells us much about what the function does. In those curcumstances the name can be omited
-only the return type specified and the keyword `return` used to return a value. Note that
-`return` also terminates the execution of the function.
-
-```xy
-def myfunc(x: int, y: int) -> int {
+```python
+func myfunc(x: Int, y: Int) -> Int {
     return x + y;
 }
 ```
 
-`return` statements are a syntax sugar in XY. They are not required but come in handy
-in many circumstances.
+## Function names
 
-Return statements and named return values can be combined:
+A function name begins with a latter optionally followed by other letters or
+digits. Only the latin letters `a-z` and `A-Z` are allowed. **Underscores are
+not allowed** meaning names are either *camelCase* or *PascalCase*.
 
-```xy
-def myfunc(x: int, y: int) -> (res: int) {
-    return x + y;
+<details>
+<summary>Reasoning</summary>
+Disallowing the underscore symbols simplifies name mangling in a compiler.
+
+Also, all naming conventions have their advantages and disadvantages. Arguing
+about which one is better is like arguing about endianness, or spaces vs tabs.
+</details>
+
+## Named returned values
+
+Sometimes it is useful to give a name to the returned value and use it as a variable.
+
+```python
+func myfunc(a: Int, b: Int) -> (res: Int) {
+    if (a > b) {
+        res += a;
+    }
 }
 ```
 
-## Macros
-If the function body is just one line of code than XY offers a shorthand notation:
-
-```xy
-def myfunc(x: int, y: int) x + y;
+This is equivalent to
+```python
+func myfunc(a: Int, b: Int) -> Int {
+    res: Int;
+    if (a > b) {
+        res += a;
+    }
+    return res;
+}
 ```
 
-Functions that use this shorthand notation (i.e. no explicit return type and single-line body)
-are called macros.
+### Multiple returned values
 
-{: .its-a-trap }
-Macros are not just syntax sugar. They are special in curtain cases. Refer to [Boundary Expressions]()
-for more info.
+XY functions can return multiple value. In that case all the returned values have to be named.
 
-## Multiple Return Values
+```python
+func myfunc(x: Int, y: Int) -> (a: Int, b: Int) {
+    a = y;
+    b = x;
+}
+```
 
-They are not commonly used but in cirtain cases they can be very useful. Here is an example:
+Inside the function body the returned values are threaded as if they were variables.
+When the function terminates the returned values are the values the variables had at the time of termination.
 
-```xy
-def solveSquare(a: float, b: float, c: float) -> (r1: float, r2: float) {
-    r1 = ....;
-    r2 = ....;
+### Returned statements and multiple returned values
+
+`return` can be used to assign values to the return value variables and terminate the execution of the function.
+
+```python
+func myfunc(x: Int, y: Int) -> (a: Int, b: Int) {
+    return a = y, b = x;
+}
+```
+
+This is called a named return. The assignments can be omitted (unnamed return)
+```python
+func myfunc(x: Int, y: Int) -> (a: Int, b: Int) {
+    return y, x;
+}
+```
+
+**The expressions in a return statement must either all have names or none**.
+
+A return statement may not assign values to all returned variables.
+
+```python
+func myfunc(x: Int, y: Int) -> (a: Int, b: Int, c: Int) {
+    # ...
+    return a = 10, c = x + y;
+}
+
+The `return;` statement can be used to terminate the execution of a function.
+
+```python
+func myfunc(x: Int) -> (a: Int, b: Int, c: Int) {
+    a = x - 10;
+    b = x * 2;
+    c = x + 20;
+    if (a > b) {
+        return;
+    };
+    c *= 2;
+}
+```
+
+is equivalent to
+
+```python
+func myfunc(x: Int) -> (a: Int, b: Int, c: Int) {
+    a = x - 10;
+    b = x * 2;
+    c = x + 20;
+    if (a <= b) {
+        c *= 2;
+    };
+}
+```
+
+## Multiple assignment
+
+```rust
+func compute(x: Int) -> (a: Int, b: Int) {
+	return x * 2, -x;
+}
+
+func main() {
+    (x:, y:) = compute(5);
+}
+```
+
+It is very common to start with a function that returns just a single value and the add another one. To support these cases
+the number of variables on the left hand size of a `=` may be less the number of returned values.
+
+```rust
+func main() {
+    x := compute(5);
+}
+```
+
+In that case the value returned in `a` will be assigned to `x`. The value returned in `b` will be ignored.
+
+### Void functions
+
+Functions that don't return a value indicate this by using the follow syntax
+
+```rust
+func myvoid() -> () {
+
+}
+```
+
+or simply
+
+```rust
+func myvoid() {
+
 }
 ```
 
 ## General Form
-The definition of a functions follows the established pattern:
+The definition of a function follows the established pattern:
 
-`def <func-name>(<params>) <expression>`
+`func <func-name>(<params>) <expression>`
