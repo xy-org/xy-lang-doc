@@ -1,6 +1,7 @@
 ---
 title: The Case for Programming Languages
 parent: Intro
+nav_order: 10
 ---
 
 # The Case for Programming Languages
@@ -53,6 +54,7 @@ Here are some common problems that a language may concern itself with:
 - Massively Parallel Systems, SIMT (e.g. GPUs)
 - Systems without Shared Memory (e.g. Distributed Systems)
 - Multi-threading
+- Support for older hardware
 
 A language has to also answer:
 - Is the language domain specific or general purpose?
