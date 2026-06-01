@@ -90,6 +90,7 @@ func myfunc(x: Int, y: Int) -> (a: Int, b: Int, c: Int) {
     # ...
     return a = 10, c = x + y;
 }
+```
 
 The `return;` statement can be used to terminate the execution of a function.
 
@@ -147,7 +148,6 @@ Functions that don't return a value indicate this by using the follow syntax
 
 ```rust
 func myvoid() -> () {
-
 }
 ```
 
@@ -155,11 +155,5 @@ or simply
 
 ```rust
 func myvoid() {
-
 }
 ```
-
-## General Form
-The definition of a function follows the established pattern:
-
-`func <func-name>(<params>) <expression>`
