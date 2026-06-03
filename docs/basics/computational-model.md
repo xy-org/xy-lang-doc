@@ -1,6 +1,6 @@
 ---
 title: Computational Model
-parent: Intro
+parent: Basics
 nav_order: 30
 ---
 
