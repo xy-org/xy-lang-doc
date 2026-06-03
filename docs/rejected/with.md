@@ -33,7 +33,7 @@ basically with says I want to use all the fields. To be read with *all the field
 
 maybe we can do a with any(val) or with any(val) call(...);
 
-shorthand with(val) func(_) = 
+shorthand with(val) func(_) =
 
 This is the opposite of Struct{
 fiel=val,
@@ -42,4 +42,13 @@ field=val,
 }
 
 and with is all fields have been used
+```
+
+### Reasons to be rejected ###
+ * Too case specific
+ * For loops do the same things:
+```rust
+def copy(s: Any) = for (f in fieldsof(s)) -> (res: %s) {
+	res[f] = s[f]'copy();
+};
 ```
