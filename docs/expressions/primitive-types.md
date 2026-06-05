@@ -173,8 +173,8 @@ much better.
 
 ### The case for pointers
 
-Nothing compares to the power and freedom that pointers provide. They are a
-fundamental to how hardware works. At the same time is very easy to [make
+Nothing compares to the power and freedom that pointers provide. They are
+fundamental to how hardware works. At the same time it is very easy to [make
 mistakes]({% link docs/intro/case-for-xy.md
 %}#with-great-power-comes-great-responsibility) when dealing with pointers. XY
 provides the means to work with pointers "locally" i.e. withing the same data
