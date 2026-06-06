@@ -6,7 +6,7 @@ nav_order: 20
 
 # Branches a.k.a If Expressions
 
-If expressions are similar to if statements in languages like C or Python:
+At first glance `if` expressions appear similar to if statements in languages like C or Python:
 
 ```rust
 if (cond1) {
@@ -16,9 +16,9 @@ if (cond1) {
 }
 ```
 
-The else part is not mandatory.
+The else part is optional.
 
-If expressions are chained using the keyword `elif`:
+If expressions are chained using the `elif` keyword:
 
 ```rust
 if (cond1) {
