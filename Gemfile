@@ -6,6 +6,9 @@ gem "just-the-docs", "0.12.0"
 
 gem "jekyll-redirect-from", "0.16.0"
 
+# used for merging table cells
+gem "jekyll-spaceship", "0.10.2"
+
 gem "csv", "~> 3.3"
 
 gem 'base64', '~> 0.3.0'

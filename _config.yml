@@ -60,6 +60,7 @@ callouts:
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-spaceship
 
 exclude:
   - tutorial
