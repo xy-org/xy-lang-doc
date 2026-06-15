@@ -109,11 +109,37 @@ tasks. Only a niche set of problems benefit from the added precision of
 | `2d`           | Double |
 | `3.14_15`           | Double (`_` is ignored) |
 
+### Builtin mathematical operations
+
+Numeric types are closed under all mathematical operations : `+`, `-`, `*`, `/`, `^`.
+XY never auto promotes variables. It alos doesn't offer any cross type mathematical operations.
+This behavior is somewhat restrictive and forces the programmer to use explicitly casts.
+The advantage is it avoids many common mistakes and gotchas.
+
+```rust
+a : Int = ...;
+b : Int = ...;
+x := a / b;; x has type `Int`
+y := a'to(Float) / b'to(Float);; y has type `Float`
+```
+
+As mathematical operations in XY are just functions then developers are free
+to overload any of the operators and provide mixed type math functions if necessary.
+For example:
+
+```rust
+def mul(a: Float, b: Double) = mul(a'to(Double), b);
+...
+num1 : Float = ...;
+num2 : Double = ...;
+num3 := num1 * num2;
+```
+
 ## Bit Types
 
 Quite often programs have to work with bits (cases include masks, flags, etc.).
 In order to improve expressiveness and type safety XY offers separate types
-instead of reusing the integer types.
+instead of reusing integer types.
 
 | Type        | Description |
 |:-------------|:------------------|
@@ -126,7 +152,7 @@ instead of reusing the integer types.
 
 There is no syntax for creating literals of `Bits*` types. They way they are
 constructed is by using a number and then converting it to the corresponding
-`Bits` type through the use of the `bits` function.
+`Bits` type through the use of the builtin `bits` function.
 
 | Example        | Description | Result Type|
 |:-------------|:------------------|:------------------|
