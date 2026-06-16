@@ -45,17 +45,14 @@ The entire digital world is an illusion. The text you are reading right now
 doesn't really exist. It is just a grid of pixels arranged carefully to create
 the illusion of text when looked from afar. Numbers are simply a series of bits
 interpreted in a specific way. Even bits don't really exist - they are often
-just voltages below or above a threshold. Look at the data sheet of any
-transistor and you will see it is an analog device. However if we arrange the
-transistors in a specific way and choose an appropriate voltage as a threshold
-then we can pretend (create the illusion) that it is a digital system. It's just
-an illusion but a very useful one.
+just voltages below or above a threshold. Transistors are analog devices however
+if we arrange them in a specific way and choose an appropriate voltage as a
+threshold then we can pretend (create the illusion) that it is a digital system.
+It's just an illusion but a very useful one.
 
-When you call a function with some arguments, the arguments don't really
-"exist", they are just offsets on the stack. Even functions don't exist, a
-program is a long list of instructions and a func call is simply a jump to some
-address. Structs or classes in C/C++ are even less than that. Once compilation
-finishes they disappear barely leaving a trace. They are all illusions created
+Programming langauges are also full of illussions: functions are just addresses
+in a long list of instructions, arguments are offsets on the stack, structs and
+classes get decomposed barely leaving a trace. These are all illusions created
 by the programming language but very useful illusions.
 
 ### Data is more important than code
@@ -91,19 +88,19 @@ responsibility". Unfortunately object-oriented languages trivialize them. This
 is a major issue with OOP. Such calls are made all the time without so much as a
 second thought.
 
-### Performance problems cannot be solely solved by hardware upgrades
+### Performance problems cannot be solved solely by hardware upgrades
 
-Performance optimization is a nuisance. It's difficult, time-consuming,
-non-functional. Highly optimized code tends to be less readable, less portable,
-more difficult to change. Optimization is never truly complete; there's always
-room to squeeze out more performance. Premature optimization is a source of
-evil.
+Can we ignore the question of performance? After all performance optimization is
+a nuisance. It's difficult, time-consuming, non-functional. Highly optimized
+code tends to be less readable, less portable, more difficult to change.
+Optimization is never truly complete; there's always room to squeeze out more
+performance. Premature optimization is a source of evil.
 
 At the same time, hardware computational power has grown exponentially over the
 years. Why bother optimizing a program to run twice as fast on today's
 processors, when tomorrow's processors will execute it twice as fast even
-without optimizations? Human time is expensive, hardware is relatively cheap.
-Can we ignore the question of performance?
+without optimizations? Human time is expensive, hardware is relatively cheap. So,
+can we ignore performance?
 
 Hardware is cheaper than human labor but it's not free. As you start adding
 processing power, the cost can quickly go out of control. Anyone who has
@@ -140,7 +137,7 @@ difference.
 
 There is a huge variety of hardware out there so it makes sense to have some
 sort of abstraction over it. However we should not forget that it is real
-hardware that ultimately runs a program and not the idealized abstraction.
+hardware that ultimately runs a program and not some idealized abstraction.
 
 ### Language, compiler, and build system should work together
 
@@ -148,7 +145,7 @@ These are tools that are there to help. They should not compete with each other
 but work together. Developers should not fight any of them. They should fit
 together like the pieces of a puzzle.
 
-### The proof is in the tasting
+### The proof of the pudding is in the eating
 
 A good piece of software is one that allows its users to do their jobs quickly
 and efficiently. By the same token, a good programming language is one that
