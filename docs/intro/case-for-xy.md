@@ -11,6 +11,27 @@ nav_order: 20
 The following principles form the basis of XY. They are threated as axioms
 although some evidence is provided to support them.
 
+### Programming is a form of communication
+
+When programming a developer communicates with atleast 3 other parties:
+ * The compiler - the easiest to communicated with. The protocol (i.e. language)
+   is set and relatively simple. The comunication is bidirectional i.e. the compiler can
+   respond to your actions.
+ * The processor - could be a cpu, a gpu, or any other chip. This communication is more
+   difficult. Processors tend to follow instructions blindly and complain only in exceptional
+   cases.
+ * The maintainer - the most difficult communication. It is complitely unidirectional -
+   the creator of a piece of code communicates with a future maintainer.
+   The reverse communication is impossible. Often the original creator and the maintainer
+   are one and the same person but displaced through time. Worst of all this communication
+   is not mandatory - the developer may choose to remain silent to the maintainer.
+
+XY's perspective: Just like any other programming language XY focuses on the first
+two kinds of communication but provides some functionality to support the third kind:
+ * Interpolation in doc strings
+ * Different ways to call a function depending on intent
+ * Reliance on context instead of explicitness which mirrors human speach
+
 ### No silver bullet
 
 Any approach to software development (object oriented, function, etc) has its
