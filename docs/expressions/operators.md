@@ -44,6 +44,7 @@ XY has the following operators:
 
 {: .note :}
 > * There is no unary plus
+> * `++` and `--` are always suffix
 > * No bitwise operations. Instead the [Bit types]({% link docs/expressions/primitive-types.md %}#bit-types) are used.
 
 ## Operator overloading
