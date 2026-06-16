@@ -1,9 +1,11 @@
 name: CI
 
 on:
-  push:
-    branches: ["master"]
-  pull_request:
+  # Disable tutorial CI for now as the language is undergoing a mojor change
+  # push:
+  #   branches: ["master"]
+  # pull_request:
+  workflow_dispatch:  # Allow for the workflow to be run manually
 
 jobs:
   # Build job
