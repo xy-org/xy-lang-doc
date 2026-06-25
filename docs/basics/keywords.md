@@ -26,5 +26,5 @@ nav_order: 30
 The following words are reserved for future use:
 
 ```
-ref, module, class, out, switch, case
+ref, module, class, out, switch, case, goto
 ```
