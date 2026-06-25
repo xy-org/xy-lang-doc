@@ -46,9 +46,9 @@ doesn't really exist. It is just a grid of pixels arranged carefully to create
 the illusion of text when looked from afar. Numbers are simply a series of bits
 interpreted in a specific way. Even bits don't really exist - they are often
 just voltages below or above a threshold. Transistors are analog devices however
-if we arrange them in a specific way and choose an appropriate voltage as a
-threshold then we can pretend (create the illusion) that it is a digital system.
-It's just an illusion but a very useful one.
+if we arrange them in a specific way and choose appropriate voltages then we can
+pretend (create the illusion) that it is a digital system. It's just an illusion
+but a very useful one.
 
 Programming langauges are also full of illussions: functions are just addresses
 in a long list of instructions, arguments are offsets on the stack, structs and
