@@ -9,11 +9,11 @@ nav_order: 10
 One of the greatest advantages of digital computers is their simplicity. A
 digital computer needs very few operations (in theory [only
 1](https://simple.wikipedia.org/wiki/One_instruction_set_computer)) and a large
-enough memory to solve any solvable problem. A programming language which offer
-these operations is said to be Turing-complete i.e. any problem can be solved
-using that language. Turing completeness is a very low hurdle and virtually all
-programming languages are Turing-complete. This means, any solvable problem can
-be solved in any programming language. So, what is the difference between
+enough memory to solve any solvable problem. A programming language which offers
+these operations is said to be Turing-complete i.e. any solvable problem can be
+solved using that language. Turing completeness is a very low hurdle and
+virtually all programming languages are Turing-complete. This means, any problem
+can be solved in any programming language. So, what is the difference between
 programming languages then? Why do we even need so many? Why don't we simply
 choose one language and write all the software in that language? Is it simply a
 matter of preference?
@@ -27,11 +27,11 @@ solutions to problems. Such languages tend to provide polymorphism, abstraction,
 inheritance, and encapsulation, and attempt to solve problems in the context of
 these concepts.
 
-A functional language tries to solve problems in the context of closures and
-immutability. A logic programming language tries to solve problems in the
-context of formal logic. And so on. **We need a new language if we want to look
-at things from a certain perspective which is not facilitated by an existing
-language.**
+A functional language tries to solve problems in the context of functions,
+closures, immutability. A logic programming language tries to solve problems
+in the context of formal logic. And so on. **We need a new language if we want
+to look at things from a certain perspective which is not facilitated by an
+existing language.**
 
 ## Typical Problems
 

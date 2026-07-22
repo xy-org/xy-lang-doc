@@ -30,11 +30,11 @@ XY's perspective: Just like any other programming language XY focuses on the fir
 two kinds of communication but provides some functionality to support the third kind:
  * Interpolation in doc strings
  * Different ways to call a function depending on intent
- * Reliance on context instead of explicitness which mirrors human speach
+ * Reliance on context instead of explicitness which mirrors human speech
 
 ### No silver bullet
 
-Any approach to software development (object oriented, function, etc) has its
+Any approach to software development (object oriented, functional, etc) has its
 advantages and disadvantages. Previous attempts to apply one-size-fits-all
 solutions have produced mixed results at best. XY has its own way of looking at
 things and its not for everybody and every problem.
@@ -130,7 +130,7 @@ micro optimizations as these are often easy and can be automated.
 
 There is a gray area of course but generally developers are responsible for
 lowering the complexity of an algorithm and the compiler for lowering the hidden
-constants. This ensures people spend their time where it can make the most
+costs. This ensures people spend their time where it can make the most
 difference.
 
 ### Software runs on real hardware
